@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { BotaoLogin, Container, ConteudoBotao, ConteudoEmail, ConteudoInput, ConteudoLogin, ConteudoSenha, ConteudoSVG, ConteudoTitulo, CriarConta, Header, InfoInput, InputEmail, InputSenha, TextoLogin, Titulo, TituloTrabalheConosco, TrabalheConosco } from "./styles";
 import { Image, Keyboard, KeyboardAvoidingView, Text, TouchableWithoutFeedback } from "react-native";
 import { Fontisto } from '@expo/vector-icons';
@@ -7,6 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 import { Octicons } from '@expo/vector-icons';
 import ImagemMulher from '../../assets/images/imagem-mulher.svg';
 import KeyboardListener from 'react-native-keyboard-listener';
+import { AuthContext } from "../../context/authContext";
 
 
 export default function Login() {
@@ -16,16 +17,14 @@ export default function Login() {
 
     const navigation = useNavigation();
 
+    const { login }  = useContext(AuthContext)
 
     function navegarParaCadastro() {
         navigation.navigate('Cadastro' as never, {
         } as never);
     }
 
-    function navegarParaHome() {
-        navigation.navigate('Home' as never, {
-        } as never);
-    }
+   
 
     function navegarParaColaboradores() {
         navigation.navigate('Colaboradores' as never, {
@@ -36,6 +35,8 @@ export default function Login() {
         navigation.navigate('Pesquisar' as never, {
         } as never);
     }
+
+  
 
 
     return (
@@ -81,7 +82,7 @@ export default function Login() {
 
                         <ConteudoBotao>
                             <BotaoLogin
-                                onPress={() => navegarParaPesquisar()}>
+                                onPress={login}>
                                 <ConteudoTitulo>
                                     Login
                                 </ConteudoTitulo>

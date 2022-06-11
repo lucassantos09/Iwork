@@ -22,11 +22,19 @@ export const Titulo = styled.Text`
     color: #222222;
 `;
 
-export const Sair = styled.Text`
+export const Sair = styled.TouchableOpacity`
     font-family: 'PoppinsRegular';
     font-size: 14px;
     color: #222222;
 `;
+
+export const TextoSair = styled.Text`
+    font-family: 'PoppinsRegular';
+    font-size: 14px;
+    color: #222222;
+`;
+
+
 
 export const ConteudoTituloCategoria = styled.View`
     justify-content: flex-start;

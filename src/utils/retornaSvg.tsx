@@ -6,6 +6,8 @@ import Pintura from '../assets/svg/pintura.svg';
 import Reboque from '../assets/svg/reboque.svg';
 import Vassoura from '../assets/svg/vassoura.svg';
 import Arrowleft from '../assets/svg/arrow-left.svg';
+import Trabalhador1 from '../assets/svg/trabalhador1.svg';
+
 
 
 
@@ -28,8 +30,11 @@ export default function retornaSvg(categoria: string, largura = 56, altura = 56)
 
         case 'Vassoura':
             return <Vassoura width={largura} height={altura} />
-            
+
         case 'ArrowLeft':
             return <Arrowleft width={largura} height={altura} />
+
+        case 'Trabalhador1':
+            return <Trabalhador1 width={largura} height={altura} />
     }
 }

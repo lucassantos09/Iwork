@@ -3,7 +3,8 @@ import styled from "styled-components/native";
 
 export const Container = styled.TouchableOpacity `
     width: 42%;
-    height: 214px;
+    height: auto;
+    min-height: 214px;
     background: #FFFFFF;
     align-items: center;
     border-radius: 10px;
@@ -12,6 +13,7 @@ export const Container = styled.TouchableOpacity `
     margin-right: 10px;
     box-shadow: 0px 30px 25px rgba(238, 238, 238, 0.4);
     flex-flow: column;
+    padding-bottom: 15px;
 `
 
 export const ConteudoSvg = styled.View `

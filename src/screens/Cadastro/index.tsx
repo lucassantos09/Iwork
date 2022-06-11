@@ -15,6 +15,11 @@ export default function Cadastro() {
     function voltar() {
         navigation.goBack();
     }
+    
+    function IrLogin() {
+        navigation.navigate('Login' as never, {
+        } as never);
+    }
 
     return (
         <Container>
@@ -59,7 +64,7 @@ export default function Cadastro() {
 
 
 
-            <BotaoLogin>
+            <BotaoLogin onPress={IrLogin}>
                 <ConteudoTitulo>
                     Cadastrar
                 </ConteudoTitulo>

@@ -8,7 +8,7 @@ export const Container = styled.View `
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 68px;
+    padding-top: 28px;
 `
 export const Titulo = styled.Text `
     font-style: normal;
@@ -16,17 +16,16 @@ export const Titulo = styled.Text `
     font-size: 20px;
     margin:  0 auto;
     color: #222222;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const Elogio = styled.Text `
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 15px;
     color: #222222;
-    width: 198px;
+    width: 250px;
     margin: 20px auto 20px auto;    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
 `;
 
 
